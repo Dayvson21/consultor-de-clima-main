@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Consultor de clima</h1>
+        <p>Descubra o clima da sua localização através do CEP</p>
+    </header>
+    <main>
+        <div class="container">
+            <div class="divFilho1">
+                <input id="cepEntrada" type="text" maxlength="9" placeholder="00000-000" required>
+                <button id="btn">Buscar</button>
+            </div>
+            <div id="div2" class="divFilho2">
+                <div class="card">
+                    <h6>"Endereço: ${}"</h6>
+                    <h6>"Bairro: ${}"</h6>
+                    <h6>"Estado: ${}"</h6>
+                    <h6>"CEP: ${}"</h6>
+                </div>
+                <div class="card">
+                    <h6>"Endereço: ${}"</h6>
+                    <h6>"Bairro: ${}"</h6>
+                    <h6>"Estado: ${}"</h6>
+                    <h6>"CEP: ${}"</h6>
+                </div>
+            </div>
+            <div class="divFilho3">
+                <p>Histórico de Consultas</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

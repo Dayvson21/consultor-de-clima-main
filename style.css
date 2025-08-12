@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 60px;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1 {
+    font-size: 70px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+}
+input {
+    outline: none;
+    padding: 11px;
+    width: 22rem;
+    border-radius: 1pc;
+    font-size: 20px;
+}
+input::placeholder {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+button {
+    cursor: pointer;
+    padding: 10px;
+    width: 8rem;
+    border-radius: 1pc;
+    max-height: 45px;
+    font-size: 22px;
+    font-weight: bold;
+}
+.divFilho1 {
+    background-color: white;
+    box-shadow: 1px 1px 4px 10px rgb(161, 151, 151);
+    width: 90rem;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1pc;
+    gap: 4px;
+}
+.divFilho2 {
+    width: 90rem;
+    height: 20rem;
+    border-radius: 1pc;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    justify-items: center;
+}
+.divFilho3 {
+    background-color: white;
+    box-shadow: 1px 1px 4px 10px rgb(161, 151, 151);
+    width: 90rem;
+    height: 6rem;
+    border-radius: 1pc;
+    padding: 6px;
+}
+.card {
+    padding: 10px;
+    background-color: aqua;
+    border-radius: 1pc;
+    width: 40rem;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
