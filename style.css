@@ -57,7 +57,7 @@ button {
 }
 .divFilho2 {
     width: 90rem;
-    height: 20rem;
+    height: 100%;
     border-radius: 1pc;
     display: grid;
     grid-template-columns: 1fr 1fr ;
@@ -73,7 +73,7 @@ button {
 }
 .card {
     padding: 10px;
-    background-color: aqua;
+    box-shadow: 1px 1px 4px 10px rgb(161, 151, 151);
     border-radius: 1pc;
     width: 40rem;
     font-size: 40px;

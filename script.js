@@ -1,27 +1,42 @@
 
 const cep = document.getElementById("cepEntrada");
 const botao = document.getElementById("btn");
+const div2 = document.getElementById("div2");
 
 
 const ApiClima = "https://openweathermap.org/api"
 
-
 botao.addEventListener("click", () => {
-    const ApiCorreios = `https://viacep.com.br/ws/${cep.value}/json/`;
-    try {
-
-        fetch(ApiCorreios)
-            .then(response => response.json())
-            .then(data =>
-                console.log(data))
-            `<div class="card">
-                <h6>"Endereço: ${}"</h6>
-                <h6>"Bairro: ${}"</h6>
-                <h6>"Estado: ${}"</h6>
-                <h6>"CEP: ${}"</h6>
-            </div>`
-
-    } catch (error) {
-        console.error('Ocorreu um erro:', error);
-    }
+    carregarClima()
 });
+
+async function carregarClima() {
+    try {
+        const ApiCorreios = await fetch(`https://viacep.com.br/ws/${cep.value}/json/`);
+        const dados = await ApiCorreios.json();
+
+        if (dados.error) {
+            div2.innerHTML = "<p>CEP não encontrado.</p>";
+            return;
+        }
+        criarCard(dados);
+    } catch (error) {
+        div2.innerHTML = "<p>Erro ao buscar dados.</p>";
+        console.error(error);
+    }
+
+}
+
+function criarCard(dados) {
+    const divClima = `               
+    <div class="card">
+        <h6>"Endereço: ${dados.logradouro}"</h6>
+        <h6>"Complemento: ${dados.complemento}"</h6>
+        <h6>"Bairro: ${dados.bairro}"</h6> 
+        <h6>"Estado: ${dados.uf}"</h6>
+        <h6>"CEP: ${dados.cep}"</h6>
+      
+    </div>
+    `
+    div2.innerHTML = divClima
+};
